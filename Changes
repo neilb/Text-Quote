@@ -7,6 +7,7 @@ Revision history for Perl module Text::Quote
     - Switched to Dist::Zilla
     - Added github repo to pod
     - Reformatted as per CPAN::Changes::Spec
+    - Added COPYRIGHT AND LICENSE section to pod
 
 0.3 2002-05-06 YVES
     - First release to CPAN
