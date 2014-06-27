@@ -808,6 +808,10 @@ Better synopsis.  Better Description.  More tests.
 
 None.
 
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/Text-Quote>
+
 =head1 AUTHOR
 
 Yves Orton, E<lt>demerphq@hotmail.comE<gt>

@@ -5,6 +5,7 @@ Revision history for Perl module Text::Quote
       regexp wasn't handling enough digits. RT#66934
     - Fixed failing test due to regexp serialization format RT#66934
     - Switched to Dist::Zilla
+    - Added github repo to pod
     - Reformatted as per CPAN::Changes::Spec
 
 0.3 2002-05-06 YVES
