@@ -1,6 +1,7 @@
 Revision history for Perl module Text::Quote
 
 0.31 2014-06-28 NEILB
+    - Switched to Dist::Zilla
     - Reformatted as per CPAN::Changes::Spec
 
 0.3 2002-05-06 YVES
