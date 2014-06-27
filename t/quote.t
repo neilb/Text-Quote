@@ -77,7 +77,7 @@ my $repeat="abcdefg"x 20;
     }
 
     is($quoter->quote(undef),"undef","Quote undef");
-    is($quoter->quote_regexp(qr/ABCDEF/),"qr/ABCDEF/","Quote Regexp");
+    is($quoter->quote_regexp(qr/ABCDEF/),'qr/(?^:ABCDEF)/',"Quote Regexp");
 
 }
 {
