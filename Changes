@@ -1,6 +1,8 @@
 Revision history for Perl module Text::Quote
 
 0.31 2014-06-28 NEILB
+    - Some tests were failing on perls built with -Duselongdouble --
+      regexp wasn't handling enough digits. RT#66934
     - Fixed failing test due to regexp serialization format RT#66934
     - Switched to Dist::Zilla
     - Reformatted as per CPAN::Changes::Spec

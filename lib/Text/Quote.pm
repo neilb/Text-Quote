@@ -225,7 +225,7 @@ sub _textquote_number {
 
 	my ( $self, $num ) = @_;
 
-	if ( defined $num && $num =~ /\A-?(?:0|[1-9]\d{0,8})(\.\d{0,15})?\z/ ) {
+	if ( defined $num && $num =~ /\A-?(?:0|[1-9]\d{0,8})(\.\d{0,18})?\z/ ) {
 		return $num;
 	}
 	return;
