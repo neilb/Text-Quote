@@ -1,16 +1,23 @@
-Revision history for Perl extension Text::Quote.
+Revision history for Perl module Text::Quote
 
-0.01  Mon Apr 22 2002
-	- original version; created by h2xs 1.21 with options
-		-n Text::Quote -v0.01 -XA
-0.02  5/2/2002
-	- Cleaned up code, added pod.
-0.021 5/3/2002
+0.31 2014-06-28 NEILB
+    - Reformatted as per CPAN::Changes::Spec
+
+0.3 2002-05-06 YVES
+    - First release to CPAN
+
+0.021 2002-05-03
     - Fixed bug where quote_best and _textquote_escape had different
-    ideas of what needed escaping.  Added option 'encode_high' to determine
-    if high bit chars needed escaping or if they can be left as literals
+      ideas of what needed escaping.  Added option 'encode_high' to determine
+      if high bit chars needed escaping or if they can be left as literals
     - Fixed minor bug in quote_best where it was using the last lowest instead
-    of the first lowest used quote char.
+      of the first lowest used quote char.
 
 
+0.02 2002-05-02
+    - Cleaned up code, added pod.
+
+0.01 2002-04-22
+    - original version; created by h2xs 1.21
+      with options -n Text::Quote -v0.01 -XA
 
