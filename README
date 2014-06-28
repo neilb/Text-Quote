@@ -1,0 +1,28 @@
+Text/Quote version 0.20
+=======================
+
+Used to convert arbitrary strings into a format that perl can parse using eval.
+Primarily meant as a utility class for other modules that generate eval'able output.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Compress::Zlib MIME::Base64 Carp::Assert Test::More
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2002 Yves Orton
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+

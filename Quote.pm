@@ -1,6 +1,4 @@
 package Text::Quote;
-
-use 5.006;
 use strict;
 use warnings;
 use Compress::Zlib;
@@ -8,11 +6,17 @@ use MIME::Base64;
 use Carp();
 use Carp::Assert;
 use warnings::register;
+use vars qw/$VERSION/;
 
+$VERSION=0.3_001;
 
 =head1 NAME
 
-Text::Quote - Quotes strings as required for perl to eval them back correctly
+Text::Quote - Quotes strings as required for perl to eval them back correctly.
+
+=head1 VERSION
+
+Version 0.3 B<BETA>
 
 =head1 SYNOPSIS
 
