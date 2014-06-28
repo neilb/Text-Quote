@@ -409,7 +409,7 @@ Will automatically select the appropriate quoting char.
 
 sub quote_regexp {
 	my $self = shift;
-	my $rex  = "".shift(@_);
+        my $rex  = shift(@_);
 
 	# a stringified regex will look like (?-xism: ... )
 	# when it was created by an optionless  //
@@ -418,9 +418,17 @@ sub quote_regexp {
 	# so we strip the added layer off if it is (?-xism:
 	# note this means the regexp is safe:had there been any options
 	# the prefix would be different and we would ignore it.
-	if ( substr( $rex, 0, 8 ) eq "(?-xism:" ) {
-		$rex = substr( $rex, 8, length($rex) - 9 );
-	}
+        my $mods= "";
+        if ( $] >= 5.010 ) {
+            ($rex,$mods)= re::regexp_pattern($rex);
+        } else{
+            $rex .= "";
+            if ( substr( $rex, 0, 8 ) eq "(?-xism:" ) {
+                $rex = substr( $rex, 8, length($rex) - 9 );
+            } elsif ( substr( $rex, 0, 4 ) eq "(?^:" ) {
+                $rex = substr( $rex, 4, length($rex) - 5 );
+            }
+        }
 
 	# find the ideal quote symbol for the regex
 	my ( $qq, $qb, $qe, $nqq ) = $self->best_quotes( $rex, chars => [qw( / ! {} - & ; )] );
@@ -429,7 +437,7 @@ sub quote_regexp {
 	# escape any quote symbols in the regex, ideally there shouldnt
 	# be any because of _quote_best
 	$rex =~ s/([$qs])/\\$1/g;
-	return "qr$qb$rex$qe";
+        return "qr" . $qb . $rex . $qe . $mods;
 }
 
 =head2 quote_columns(STR,QB,QE,OPTS)

@@ -77,17 +77,7 @@ my $repeat="abcdefg"x 20;
     }
 
     is($quoter->quote(undef),"undef","Quote undef");
-
-    # the serialization (aka stringification) format for regexps
-    # changed in 5.14.0, so this test is slightly different for
-    # older / newer versions of Perl
-    if ($] < 5.014) {
-        is($quoter->quote_regexp(qr/ABCDEF/),'qr/ABCDEF/',"Quote Regexp");
-    }
-    else {
-        is($quoter->quote_regexp(qr/ABCDEF/),'qr/(?^:ABCDEF)/',"Quote Regexp");
-    }
-
+    is($quoter->quote_regexp(qr/ABCDEF/),'qr/ABCDEF/',"Quote Regexp");
 }
 {
 	$quoter->quote_prop("key_quote","0");
